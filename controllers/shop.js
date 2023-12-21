@@ -15,8 +15,8 @@ exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
  Product.findById(prodId, product => {
 res.render('shop/product-detail', {
-  product: product,
-  pageTitle: product.title,
+  product: product, 
+  pageTitle: 'product-detail',
   path: '/products'
 });
  });
@@ -41,8 +41,10 @@ exports.getCart = (req, res, next) => {
 
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.findById(prodId, (product) => {
-    Cart.addProduct(prodId, product.price);
+ Product.findById(prodId, (product) => {
+  // Cart.addProduct(proId, product.price);
+    console.log('postcart...', product.price);
+    
 })
   res.redirect('/cart');
 };

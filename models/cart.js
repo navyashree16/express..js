@@ -10,7 +10,7 @@ const p = path.join(
 
 
 module.exports = class Cart {
-     static addProduct(id) {
+     static addProduct(id, productPrice) {
         //fetch the previous cart
           fs.readFile(p, (err, fileContent) =>{
             let cart = {products: [], totalPrice:0};
@@ -31,10 +31,10 @@ module.exports = class Cart {
             updatedProduct = {id: id, qty: 1};
             cart.products = [...Cart.products, updatedProduct];
         }
-        cart.totalPrice = cart.totalPrice + productPrice;
+        cart.totalPrice = cart.totalPrice + +productPrice;
         fs.writeFile(p, JSON,stringify(cart), err =>{
           console.log(err);
-        })
+        });
           });
        
      }

@@ -1,5 +1,1 @@
-[
-    {"id": "12345", "title": "A Book", "imageUrl": "https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg", "description": "This is an awesome book!", "price": "19"},
-    {"id": "0.6521706133046652", "title": "another product", "imageUrl": "https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg", "description": "another very product", "price": "20.9"}
-  ]
-  
+[{"title":"A Book","imageUrl":"https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg","description":"This is an awesome book!","price":"19"}]
